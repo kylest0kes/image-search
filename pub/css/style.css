@@ -89,3 +89,8 @@ form:hover .fa-search{
 #searched {
     text-align: center;
 }
+
+.esult-img {
+    display: block;
+    margin: 10px auto;
+}

@@ -21,7 +21,7 @@ function searchImgs() {
     // console.log(userSearch);
 
     const APIkey = "bevIgf94Ark43ohNfDdIwuO3xgHO1Jl0b1bMiqV4QnM";
-    const URL = `https://api.unsplash.com/search/photos?page=1&query=${userSearch}&client_id=${APIkey}`
+    const URL = `https://api.unsplash.com/search/photos?page=1&query=${userSearch}&client_id=${APIkey}&content_filter=high&per_page=20`
 
 
     if (userSearch.length > 0) {
