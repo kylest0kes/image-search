@@ -21,7 +21,7 @@ function searchImgs() {
     // console.log(userSearch);
 
     const APIkey = "bevIgf94Ark43ohNfDdIwuO3xgHO1Jl0b1bMiqV4QnM";
-    const URL = `https://api.unsplash.com/photos/?query=${userSearch}&client_id=${APIkey}`
+    const URL = `https://api.unsplash.com/search/photos?page=1&query=${userSearch}&client_id=${APIkey}`
 
 
     if (userSearch.length > 0) {
@@ -32,7 +32,13 @@ function searchImgs() {
             url: URL,
             success: (data) => {
                 console.log(data);
-
+                if (data != '') {
+                    data.results.forEach(img => {
+                       $('#search-results').append(`
+                        <img class='result-img' src='${img.urls.regular}' alt='img' />
+                       `) 
+                    });
+                }
 
             }
         })
