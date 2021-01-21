@@ -37,6 +37,7 @@ input{
 .search-input {
     height: 50px;
     font-size: 21px;
+    border-radius: 15px;
 }
 
 .fa-search{
@@ -57,14 +58,20 @@ input{
 form:hover{
     width: 300px;
     cursor: pointer;
-    border-radius: 50%;
 }
+
 
 form:hover input{
     display: block;
 }
 
-form:hover .fa{
-    background: #07051a;
+.search-input:hover {
+    border-radius: 15px;
+}
+
+form:hover .fa-search{
+    background: #07a329;
     color: white;
+    border-radius: 15px;
+
 }
