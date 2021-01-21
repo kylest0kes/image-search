@@ -38,6 +38,8 @@ function searchImgs() {
                         <img class='result-img' src='${img.urls.regular}' alt='img' />
                        `) 
                     });
+                } else {
+                    $('#searched').text('No available results');
                 }
 
             }
