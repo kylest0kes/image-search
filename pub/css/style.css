@@ -61,6 +61,12 @@ form:hover{
 }
 
 
+
+form:focus {
+    width: 300px;
+}
+
+
 form:hover input{
     display: block;
 }

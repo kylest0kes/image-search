@@ -1,12 +1,21 @@
-const serachBtn = document.getElementById('search-btn');
+// Event listeners
+const searchForm = document.getElementById("search-form");
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
 
-serachBtn.addEventListener('click', searchImgs);
-
-$('form').submit((e) => {
+searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
     searchImgs();
 });
 
+searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    searchImgs();
+})
+
+
+// Flickr search function
 function searchImgs() {
-    console.log('click works');
+    const userSearch = searchInput.value;
+    console.log(userSearch);
 }
