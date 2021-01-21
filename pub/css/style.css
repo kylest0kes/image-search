@@ -60,7 +60,10 @@ form:hover{
     cursor: pointer;
 }
 
+.extend-input {
 
+  
+}
 
 form:focus {
     width: 300px;
@@ -80,4 +83,9 @@ form:hover .fa-search{
     color: white;
     border-radius: 15px;
 
+}
+
+/* Results */
+#searched {
+    text-align: center;
 }
