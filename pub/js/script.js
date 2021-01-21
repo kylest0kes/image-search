@@ -14,24 +14,29 @@ searchForm.addEventListener("submit", (e) => {
 })
 
 
+
 // Flickr search function
 function searchImgs() {
     const userSearch = searchInput.value;
-    console.log(userSearch);
+    // console.log(userSearch);
 
     const APIkey = "bevIgf94Ark43ohNfDdIwuO3xgHO1Jl0b1bMiqV4QnM";
     const URL = `https://api.unsplash.com/photos/?query=${userSearch}&client_id=${APIkey}`
 
 
     if (userSearch.length > 0) {
-       $('#search-results').html(`<p id="searched">Search for "${userSearch}":</p>`);
+       $('#search-results').html(`<p id="searched">You searched for "${userSearch.toUpperCase()}":</p>`);
 
         $.ajax({
             method: 'GET',
             url: URL,
             success: (data) => {
                 console.log(data);
+
+
             }
         })
+    } else {
+        $('#searched').text('Please enter valid search terms');
     }
 }
