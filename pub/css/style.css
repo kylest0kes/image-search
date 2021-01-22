@@ -1,12 +1,15 @@
+
+
 .title {
     text-align: center;
     font-size: 50px;
     color: black;
     margin: 50px 0 15px 0;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 /* Search */
-form{
+.form{
     position: relative;
     top: 50%;
     left: 50%;
@@ -65,24 +68,14 @@ form:hover{
   
 }
 
-form:focus {
-    width: 300px;
-}
-
-
-form:hover input{
-    display: block;
-}
-
 .search-input:hover {
     border-radius: 15px;
 }
 
-form:hover .fa-search{
+.form:hover .fa-search{
     background: #07a329;
     color: white;
     border-radius: 15px;
-
 }
 
 /* Results */
@@ -90,7 +83,7 @@ form:hover .fa-search{
     text-align: center;
 }
 
-.esult-img {
+.result-img {
     display: block;
     margin: 10px auto;
 }

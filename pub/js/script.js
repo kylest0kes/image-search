@@ -13,15 +13,13 @@ searchForm.addEventListener("submit", (e) => {
     searchImgs();
 })
 
-
-
-// Flickr search function
+// Unsplash search function
 function searchImgs() {
     const userSearch = searchInput.value;
-    // console.log(userSearch);
+    const randomPageNum = Math.floor(Math.random() * 20);
 
     const APIkey = "bevIgf94Ark43ohNfDdIwuO3xgHO1Jl0b1bMiqV4QnM";
-    const URL = `https://api.unsplash.com/search/photos?page=1&query=${userSearch}&client_id=${APIkey}&content_filter=high&per_page=20`
+    const URL = `https://api.unsplash.com/search/photos/?page=${randomPageNum}&query=${userSearch}&client_id=${APIkey}&content_filter=high&per_page=20`
 
 
     if (userSearch.length > 0) {
