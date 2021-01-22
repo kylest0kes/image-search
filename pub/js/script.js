@@ -5,11 +5,13 @@ const searchBtn = document.getElementById("search-btn");
 
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
+    $('#searched').empty()
     searchImgs();
 });
 
 searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    $('#searched').empty()
     searchImgs();
 })
 
@@ -17,10 +19,11 @@ searchForm.addEventListener("submit", (e) => {
 function searchImgs() {
     const userSearch = searchInput.value;
     const randomPageNum = Math.floor(Math.random() * 20);
-
     const APIkey = "bevIgf94Ark43ohNfDdIwuO3xgHO1Jl0b1bMiqV4QnM";
+    
     const URL = `https://api.unsplash.com/search/photos/?page=${randomPageNum}&query=${userSearch}&client_id=${APIkey}&content_filter=high&per_page=20`
 
+    $('#search-results').empty()
 
     if (userSearch.length > 0) {
        $('#search-results').html(`<p id="searched">You searched for "${userSearch.toUpperCase()}":</p>`);
