@@ -80,6 +80,10 @@ form:hover{
     border-radius: 15px;
 }
 
+#search-btn:hover {
+    cursor: pointer;
+}
+
 /* Results */
 #searched {
     text-align: center;
@@ -93,23 +97,20 @@ form:hover{
 /* Footer */
 footer {
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
 }
 
 ul {
     list-style: none;
     margin-right: 10px;
+    padding-top: 15px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    right: 0;
 }
 
 a {
     color: black;
-}
-
-a:hover {
-    color: #07a329;
 }
 
 a:visited {
@@ -118,4 +119,32 @@ a:visited {
 
 .user-links {
     font-size: 25px;
+    margin-top: 8px;
+}
+
+.user-links:hover {
+    color: #07a329;
+}
+.more-imgs {
+    float: right;
+    margin-right: 20px;
+    margin-top: 50px;
+    font-size: 45px;
+}
+
+.more-imgs:hover {
+    color: #07a329;
+    cursor: pointer;
+}
+
+.back-to-top {
+    float: left;
+    margin-left: 20px;
+    margin-top: 50px;
+    font-size: 45px;
+}
+
+.back-to-top:hover {
+    color: #07a329;
+    cursor: pointer;
 }
