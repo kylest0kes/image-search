@@ -1,4 +1,6 @@
-
+body {
+    font-family: 'Gloria Hallelujah', cursive;
+}
 
 .title {
     text-align: center;
@@ -86,4 +88,34 @@ form:hover{
 .result-img {
     display: block;
     margin: 10px auto;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin-right: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #07a329;
+}
+
+a:visited {
+    color: black;
+}
+
+.user-links {
+    font-size: 25px;
 }
