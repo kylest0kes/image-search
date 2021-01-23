@@ -15,10 +15,10 @@ searchForm.addEventListener("submit", (e) => {
     searchImgs();
 })
 
+//change the width in the .form to 300px from 50px if input has text
 input.addEventListener("input", (e) => {
     input = e.target.value;
     if(input != '') {
-        //change the width in the .form to 300px from 50px
         searchForm.classList.remove("form");
         searchForm.classList.add("active-form");
     } else {
