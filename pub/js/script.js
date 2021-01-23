@@ -1,8 +1,8 @@
-// Event listeners
 const searchForm = document.getElementById("search-form");
-const searchInput = document.getElementById("search-input");
+let searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 
+// Event listeners
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
     searchImgs();
@@ -11,6 +11,19 @@ searchBtn.addEventListener("click", (e) => {
 searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
     searchImgs();
+})
+
+searchInput.addEventListener("input", (e) => {
+    searchInput = e.target.value;
+    console.log(searchInput);
+    if(searchInput.length > 0) {
+        //change the width in the .form to 300px from 50px
+        searchForm.classList.remove("form");
+        searchForm.classList.add("active-form");
+    } else {
+        searchForm.classList.remove("active-form");
+        searchForm.classList.add("form");
+    }
 })
 
 // Unsplash search function
