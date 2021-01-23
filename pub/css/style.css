@@ -159,3 +159,7 @@ a:visited {
     color: #07a329;
     cursor: pointer;
 }
+
+.hidden {
+    display: none;
+}

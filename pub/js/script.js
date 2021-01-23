@@ -1,6 +1,7 @@
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
+const backToTopBtn = document.getElementById("back-to-top");
 
 let input = document.getElementById('search-input');
 
@@ -47,6 +48,7 @@ function searchImgs() {
             url: URL,
             success: (data) => {
                 if (data.results.length != 0) {
+                    backToTopBtn.classList.remove("hidden");
                     data.results.forEach(img => {
                        $('#search-results').append(`
                         <img class='result-img' src='${img.urls.regular}' alt='img' />
