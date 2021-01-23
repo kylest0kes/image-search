@@ -46,7 +46,7 @@ function searchImgs() {
             method: 'GET',
             url: URL,
             success: (data) => {
-                if (data != '') {
+                if (data.results.length != 0) {
                     data.results.forEach(img => {
                        $('#search-results').append(`
                         <img class='result-img' src='${img.urls.regular}' alt='img' />
