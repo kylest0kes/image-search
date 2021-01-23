@@ -1,6 +1,8 @@
 const searchForm = document.getElementById("search-form");
-let searchInput = document.getElementById("search-input");
+const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
+
+let input = document.getElementById('search-input');
 
 // Event listeners
 searchBtn.addEventListener("click", (e) => {
@@ -13,10 +15,10 @@ searchForm.addEventListener("submit", (e) => {
     searchImgs();
 })
 
-searchInput.addEventListener("input", (e) => {
-    searchInput = e.target.value;
-    console.log(searchInput);
-    if(searchInput.length > 0) {
+input.addEventListener("input", (e) => {
+    input = e.target.value;
+    console.log(input);
+    if(input != '') {
         //change the width in the .form to 300px from 50px
         searchForm.classList.remove("form");
         searchForm.classList.add("active-form");
@@ -31,13 +33,14 @@ function searchImgs() {
     const userSearch = searchInput.value;
     const randomPageNum = Math.floor(Math.random() * 20);
     const APIkey = "zvBQLtkpw1SOsWh-0yw6ZefRBVdAMRqT2NrYHfiK2UM";
+
     
-    const URL = `https://api.unsplash.com/search/photos?page=${randomPageNum}&query=${userSearch}&client_id=${APIkey}&per_page=20`
+    const URL = `https://api.unsplash.com/search/photos?page=${randomPageNum}&query=${userSearch}&client_id=${APIkey}&per_page=20&content_filter=high`
 
     $('#searched').empty()
     $('#search-results').empty()
 
-    if (userSearch.length > 0) {
+    if (userSearch != '') {
        $('#search-results').html(`<p id="searched">You searched for "${userSearch.toUpperCase()}":</p>`);
 
         $.ajax({
