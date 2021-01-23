@@ -17,7 +17,6 @@ searchForm.addEventListener("submit", (e) => {
 
 input.addEventListener("input", (e) => {
     input = e.target.value;
-    console.log(input);
     if(input != '') {
         //change the width in the .form to 300px from 50px
         searchForm.classList.remove("form");
@@ -47,7 +46,6 @@ function searchImgs() {
             method: 'GET',
             url: URL,
             success: (data) => {
-                console.log(data);
                 if (data != '') {
                     data.results.forEach(img => {
                        $('#search-results').append(`
